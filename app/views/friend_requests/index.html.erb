@@ -1,0 +1,17 @@
+<h3> Here are the friend requests for <%= @user.name %> </h3>
+<br/>
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Age </th>
+    <th> Gender </th>
+  </tr>
+  <% @user.friend_requests.each do |friend_request| %>
+    <tr>
+      <td> <%= friend_request.requester.name %> </td>
+      <td> <%= friend_request.requester.age %> </td>
+      <td> <%= friend_request.requester.gender %> </td>
+    </tr>
+  <% end %>
+</table>
